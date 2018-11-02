@@ -10,6 +10,18 @@ Les comandes que s'han utilitzat són:
 
 ```cv::HoughCircles( gray_image, circles, CV_HOUGH_GRADIENT, HOUGH_ACCUM_RESOLUTION, MIN_CIRCLE_DIST, CANNY_EDGE_TH, HOUGH_ACCUM_TH, MIN_RADIUS, MAX_RADIUS );```
 
+Definició de cada parametre del HoughCircles (Anglès):
+
+•	gray_image: Input image (grayscale)
+•	circles: A vector that stores sets of 3 values: for each detected circle.
+•	CV_HOUGH_GRADIENT: Define the detection method. Currently this is the only one available in OpenCV
+•	HOUGH_ACCUM_RESOLUTION: The inverse ratio of resolution
+•	MIN_CIRCLE_DIST = gray_image.rows/8: Minimum distance between detected centers
+•	CANNY_EDGE_TH = 200: Upper threshold for the internal Canny edge detector
+•	HOUGH_ACCUM_TH = 100*: Threshold for center detection.
+•	MIN_RADIUS = 0: Minimum radio to be detected
+•	MAX_RADIUS = 20: Maximum radius to be detected.
+
 ```cv::GaussianBlur( gray_image, gray_image, cv::Size(GAUSSIAN_BLUR_SIZE, GAUSSIAN_BLUR_SIZE), GAUSSIAN_BLUR_SIGMA );```
 
 # Webcam_circles program
@@ -62,17 +74,12 @@ Aqui adjuntem les principals referencies que hem utilitzat per poder realitzar a
 
 <ol>
   
-<li>https://es.wikipedia.org/wiki/RGB</li>
+<li>https://docs.opencv.org/2.4/doc/tutorials/imgproc/gausian_median_blur_bilateral_filter/gausian_median_blur_bilateral_filter.html</li>
 
-<li>https://docs.opencv.org/3.3.0/d3/d96/tutorial_basic_geometric_drawing.html</li>
+<li>https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_circle/hough_circle.html</li>
 
-<li>https://docs.opencv.org/2.4/doc/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html</li>
+<li>https://en.wikipedia.org/wiki/Hough_transform</li>
 
-<li>https://docs.opencv.org/3.1.0/d3/d63/classcv_1_1Mat.html</li>
-
-<li>http://answers.opencv.org/question/10364/set-roi-in-cvmat/</li>
-
-<li>http://opencvexamples.blogspot.com/2013/10/void-canny-inputarray-image-outputarray.html</li>
 
 </ol>
 
